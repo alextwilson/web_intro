@@ -11,7 +11,13 @@ get '/shout' do
   "WHAT?"
 end
 
-get '/cat' do
-  @sampler = ["friend", "amigo"].sample
+get '/random-cat' do
+  @name = ["friend", "amigo"].sample
+  erb(:index)
+end
+
+get '/named-cat' do
+  p params
+  @name = params[:name]
   erb(:index)
 end
