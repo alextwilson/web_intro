@@ -12,5 +12,6 @@ get '/shout' do
 end
 
 get '/cat' do
+  @sampler = ["friend", "amigo"].sample
   erb(:index)
 end
